@@ -1,12 +1,10 @@
-// src/components/ContactItem.js
-import React from 'react';
+import React, { Component } from 'react';
 
-const ContactItem = ({ contact }) => {
-  return (
-    <li>
-      {contact.name} ({contact.number})
-    </li>
-  );
-};
+class ContactItem extends Component {
+  render() {
+    const { contact } = this.props;
+    return <li>{contact.name} ({contact.number})</li>;
+  }
+}
 
 export default ContactItem;
